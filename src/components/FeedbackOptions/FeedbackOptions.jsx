@@ -11,7 +11,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
           key={option}
           type="button"
           name={option}
-          onClick={() => onLeaveFeedback(option)}
+          onClick={() => onLeaveFeedback({ type: option })}
         >
           {option}
         </Button>
@@ -21,8 +21,6 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.arrayOf(
-    PropTypes.string.isRequired
-  ).isRequired,
+  options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
 };
