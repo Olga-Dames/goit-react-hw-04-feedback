@@ -20,8 +20,8 @@ function reducer(feed, action) {
 export default function App() {
   const [feed, setFeed] = useReducer(reducer, {
     good: 0,
-    bad: 0,
     neutral: 0,
+    bad: 0,
   });
 
   const { good, neutral, bad } = feed;
